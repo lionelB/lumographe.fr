@@ -1,0 +1,22 @@
+{
+  "ecmaFeatures": {
+    "jsx": true,
+    "arrowFunctions ": true,
+    "blockBindings": true,
+    "templateStrings": true,
+    "forOf": true,
+    "defaultParams": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "global-strict": true,
+    "no-use-before-define": false,
+  }
+}
