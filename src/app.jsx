@@ -3,7 +3,7 @@
 var React = require("react");
 var Router = require("react-router");
 
-var { RouteHandler } = Router;
+var {RouteHandler} = Router;
 
 var App = React.createClass({
 

@@ -4,12 +4,12 @@ var React = require("react");
 var Router = require("react-router");
 var flux = require("docbrown");
 
-var Link = Router.Link;
-
+// Flux
 var actions = require("../shared/actions");
 var store = require("../shared/stores").home;
 var api = require("../shared/api");
 
+// Components
 var Header = require("./header");
 var Intro = require("./intro");
 var ProjectPreview = require("./projectPreview");
@@ -17,6 +17,7 @@ var SkillSet = require("./skillSet");
 var Social = require("./social");
 var DocumentTitle = require("react-document-title");
 
+var {Link} = Router;
 
 
 var HomePage = React.createClass({
