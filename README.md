@@ -1,10 +1,12 @@
-# lumographe.fr
+# lumographe.fr [Work in  progress]
 
-An attempt to build my website as an isomorphic reactjs application. it was also the oportunity to use new tools
-- __webpack__ is used for bundling the javascript.
--  __cssnext__ will be used to enhance my css.
--  __gulp__ is used under the hood to glue all the tasks
-
+An attempt to build my website using [reactjs](http://facebook.github.io/react/). It was also the oportunity to use new tools \o/
+- __[webpack](http://webpack.github.io/docs/)__
+- __[cssnext](http://cssnext.github.io/)__
+- __[eslint](http://eslint.org/)__
+- __[react-router](https://github.com/rackt/react-router)__
+- __[Flux](http://facebook.github.io/flux/)__
+- 
 ## Requirements
 you need a [node.js](https://nodejs.org) 
 
@@ -12,7 +14,7 @@ you need a [node.js](https://nodejs.org)
 ```console
 $ npm start
 ```
-Launching a dev environement with livereload
+Launching a dev friendly environement with livereload (js + )
 
 Lint you code with
 ```
@@ -28,3 +30,8 @@ Generate json data from markdown
 ```
 $ npm run md2json
 ```
+
+# todo
+- [x] Have a seamless dev environnement (react-hot-load & livereload)
+- [x] Take advantage of react serverside rendering
+- [ ] Refactor css to use cssnext
