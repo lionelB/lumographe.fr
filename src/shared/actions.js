@@ -6,11 +6,9 @@ var dispatcher = require("./dispatcher");
 
 var appActions = flux.createActions(dispatcher, [
   "initHome",
-  "loadHomeSuccess",
   "loadHomeError",
 
   "initProject",
-  "loadProjectSuccess",
   "loadProjectError"
 ]);
 

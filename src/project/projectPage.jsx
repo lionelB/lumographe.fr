@@ -11,14 +11,14 @@ var store = require("../shared/stores").projects;
 var actions = require("../shared/actions");
 var api = require("../shared/api");
 
-var { Link } = Router;
+var {Link} = Router;
 
 var ProjectPage = React.createClass({
   displayName: "Project",
   statics: {
     fetchData: function(params){
       return api.getPageData(params.url)
-        .then( actions.loadProjectSuccess)
+        .then( actions.initProject)
         .catch( actions.loadProjectError);
     }
   },

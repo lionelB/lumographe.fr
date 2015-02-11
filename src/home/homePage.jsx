@@ -25,7 +25,7 @@ var HomePage = React.createClass({
   statics: {
     fetchData: (params) => {
       return api.getPageData("index.html")
-        .then( actions.loadHomeSuccess)
+        .then( actions.initHome)
         .catch( actions.loadHomeError);
     }
   },

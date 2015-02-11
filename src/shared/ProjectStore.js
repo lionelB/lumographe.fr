@@ -3,22 +3,9 @@
 var flux = require("docbrown");
 var Actions = require("./actions");
 var AppStore = flux.createStore({
-  actions: [Actions.only("initProject", "loadProjectSuccess", "loadProjectError")],
+  actions: [Actions.only("initProject", "loadProjectError")],
 
   initProject: function(data) {
-    this.setState({
-      title: data.meta.title,
-      subtitle: data.meta.subtitle,
-      year: data.meta.year,
-      color: data.meta.color,
-      images: data.meta.images,
-      tags: data.meta.tags,
-      links: data.meta.links,
-      html: data.html
-    });
-  },
-
-  loadProjectSuccess: function(data){
     this.setState({
       title: data.meta.title,
       subtitle: data.meta.subtitle,

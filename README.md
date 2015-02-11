@@ -6,7 +6,7 @@ An attempt to build my website using [reactjs](http://facebook.github.io/react/)
 - __[eslint](http://eslint.org/)__
 - __[react-router](https://github.com/rackt/react-router)__
 - __[Flux](http://facebook.github.io/flux/)__
-- 
+
 ## Requirements
 you need a [node.js](https://nodejs.org) 
 
