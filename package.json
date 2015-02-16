@@ -8,7 +8,8 @@
     "start": "nodemon ./server.js",
     "preserver": "gulp",
     "server": "node server.js",
-    "md2json": "gulp markdown"
+    "md2json": "gulp markdown",
+    "postintall": "gulp"
   },
   "repository": {
     "type": "git",
