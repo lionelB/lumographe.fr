@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint src  --ext=.jsx",
     "start": "nodemon ./server.js",
-    "preserver": "gulp build",
-    "server": "set NODE_ENV=production && node server.js",
+    "preserver": "gulp",
+    "server": "node server.js",
     "md2json": "gulp markdown"
   },
   "repository": {
