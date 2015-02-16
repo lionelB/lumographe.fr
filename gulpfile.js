@@ -5,17 +5,15 @@ var gutil = require("gulp-util");
 
 var webpack = require("webpack");
 var webpackConfig = require("./webpack.config.js");
+
 var livereload = require("livereload");
 
-var server = livereload.createServer();
-var opn = require("opn");
-
-
 // default task: copy assest and build js
-gulp.task("default", ["assets", "webpack-build"]);
+gulp.task("default", ["assets", "webpack:build"]);
 
 
 gulp.task("dev", ["assets"], function(){
+  var livereload = livereload.createServer();
   livereload.watch( __dirname + "/dist");
 });
 
