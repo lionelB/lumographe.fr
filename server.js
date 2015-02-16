@@ -10,7 +10,7 @@ var favicon = require("serve-favicon");
 var reactView = require("./react-middleware");
 var serverOpt = {
   url: "http://localhost",
-  port: 3000
+  port: 8080
 };
 
 
