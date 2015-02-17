@@ -19,9 +19,9 @@ var Html = React.createClass({
         </head>
         <body>
           <div className="wrapper" id="react-app" dangerouslySetInnerHTML={{__html: this.props.markup}} />
+          <script type="application/json" id="react-store-data">{this.props.data}</script>
           <script src="/js/lib.js" />
           <script src="/js/app.js" />
-          <script type="application/json" id="react-store-data">{this.props.data}</script>
         </body>
       </html>
     );
