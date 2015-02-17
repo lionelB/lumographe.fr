@@ -16,11 +16,11 @@ var Html = React.createClass({
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <link rel="icon" type="image/png" href="/favicon.ico" />
           <link rel="stylesheet" href="/css/styles.20130313.css" />
-          <script src="/js/lib.js" />
-          <script src="/js/app.js" />
         </head>
         <body>
           <div className="wrapper" id="react-app" dangerouslySetInnerHTML={{__html: this.props.markup}} />
+          <script src="/js/lib.js" />
+          <script src="/js/app.js" />
           <script type="application/json" id="react-store-data">{this.props.data}</script>
         </body>
       </html>
