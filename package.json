@@ -4,12 +4,13 @@
   "description": "lumographe personal website ",
   "main": "index.js",
   "scripts": {
+    "postintall": "gulp",
     "lint": "eslint src  --ext=.jsx",
-    "start": "nodemon ./server.js",
-    "preserver": "gulp",
-    "server": "node server.js",
-    "md2json": "gulp markdown",
-    "postintall": "gulp"
+    "predev": "gulp",
+    "dev": "nodemon ./server.js",
+    "prestart": "gulp",
+    "start": "node server.js",
+    "md2json": "gulp markdown"
   },
   "repository": {
     "type": "git",
