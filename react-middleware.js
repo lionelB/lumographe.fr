@@ -48,27 +48,29 @@ function getViewData(req) {
 function is404(route){
   return route.name === "404";
 }
+
 function reactView(req, res, next) {
   Router.run(routes, req.url, function (Handler, state) {
-    if (state.routes.some(is404)) {
-      next();
-      return;
+    var data = {
+      meta:{},
+      html:""
+    };
+    if (!state.routes.some(is404)) {
+      var data = getViewData(req);
+      var store;
+      if (req.url === "/") {
+        var store = new HomeStore();
+        actions.initHome(data);
+      }
+      else {
+        var store = new ProjectStore();
+        actions.initProject(data);
+      }
     }
 
-    var data = getViewData(req);
-    var store;
-    if (req.url === "/") {
-      var store = new HomeStore();
-      actions.initHome(data);
-    }
-    else {
-      var store = new ProjectStore();
-      actions.initProject(data);
-    }
 
-    var store = new HomeStore();
-    actions.initHome(data);
-    var title = DocumentTitle.rewind();
+
+    var title = DocumentTitle.rewind() || "404";
     var markup = React.renderToString(React.createElement(Handler, {title: title}));
     var props = assign({}, {markup: markup, title: title, data: JSON.stringify(data)}, meta.site);
     // Use react as template engine
@@ -77,9 +79,5 @@ function reactView(req, res, next) {
     res.send("<!DOCTYPE html>" + html);
   });
 }
-
-
-
-
 
 module.exports = reactView;
