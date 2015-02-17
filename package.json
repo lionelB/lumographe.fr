@@ -4,7 +4,7 @@
   "description": "lumographe personal website ",
   "main": "index.js",
   "scripts": {
-    "postintall": "gulp",
+    "postinstall": "gulp",
     "lint": "eslint src  --ext=.jsx",
     "predev": "gulp",
     "dev": "nodemon ./server.js",
