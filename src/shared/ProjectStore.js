@@ -23,7 +23,7 @@ var AppStore = flux.createStore({
   },
 
   getInitialState: function() {
-    return  {
+    return {
       title: "",
       subtitle: "",
       year: "",

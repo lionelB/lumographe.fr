@@ -4,26 +4,25 @@ var React = require("react");
 var Router = require("react-router");
 
 var routes = require("./routes.jsx");
-var stores = require("./shared/stores");
 var actions = require("./shared/actions");
 
 require("es6-promise").polyfill();
 
-function getInitialState(id) {
+function getInitialState() {
   var span = document.createElement("span");
   span.innerHTML = document.getElementById("react-store-data").innerHTML;
   var data = {};
   try{
     data = JSON.parse(span.textContent);
   } catch(error){
-    console.error("can't JSON.parse the initial store data")
+    console.error("can't JSON.parse the initial store data");
   }
   return data;
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
   var initialData = getInitialState();
-
+  actions.initHome( initialData );
   Router.run(routes, Router.HistoryLocation, function (Handler, state) {
 
     var p;
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       state.title = document.title;
       initialData = null;
-      p = Promise.resolve()
+      p = Promise.resolve();
     } else {
       p = Promise.all(state.routes
         .filter(route => route.handler.fetchData)
@@ -47,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       );
     }
 
-    p.then( x => {
-      React.render(<Handler {...state} />, document.getElementById("react-app"))
+    p.then( () => {
+      React.render(<Handler {...state} />, document.getElementById("react-app"));
     });
   });
 });

@@ -22,10 +22,10 @@ var actions = require("./src/shared/actions");
  * Poor's man api
  */
 var index = require("./dist/json/index.json");
-var pages = index.meta.projects.reduce(function(pages, project) {
+var pages = index.meta.projects.reduce(function(memo, project) {
   var key = project.url.replace(".html", ".json");
-  pages[key] = require("./dist/json/" + key );
-  return pages;
+  memo[key] = require("./dist/json/" + key );
+  return memo;
 }, {index: index});
 
 function getViewData(req) {
@@ -49,21 +49,21 @@ function is404(route){
   return route.name === "404";
 }
 
-function reactView(req, res, next) {
+function reactView(req, res) {
   Router.run(routes, req.url, function (Handler, state) {
     var data = {
-      meta:{},
-      html:""
+      meta: {},
+      html: ""
     };
     if (!state.routes.some(is404)) {
-      var data = getViewData(req);
       var store;
+      data = getViewData(req);
       if (req.url === "/") {
-        var store = new HomeStore();
+        store = new HomeStore();
         actions.initHome(data);
       }
       else {
-        var store = new ProjectStore();
+        store = new ProjectStore();
         actions.initProject(data);
       }
     }

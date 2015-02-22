@@ -30,10 +30,10 @@ function start(publicUrl, expressApp) {
     });
 
   // add cors for hot reload server
-  expressApp.use(cors({allowedOrigins: ["localhost"+":"+webpackConfig.devServer.port]}))
+  expressApp.use(cors({allowedOrigins: ["localhost" + ":" + webpackConfig.devServer.port]}));
   // use webpack dev server for serving js files
   expressApp.use("/js", function (req, res) {
-    res.redirect( webpackConfig.output.publicPath.slice(0,-1)  + req.path);
+    res.redirect( webpackConfig.output.publicPath.slice(0, -1) + req.path);
   });
 }
 

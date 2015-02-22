@@ -1,4 +1,6 @@
-var React = require('react');
+"use strict";
+
+var React = require("react");
 
 var SkillSet = React.createClass({
   propTypes: {
@@ -6,7 +8,7 @@ var SkillSet = React.createClass({
     skills: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
-  render: function() {
+  render() {
     var skills = this.props.skills.map((skill, index) => {
       return <li key={index}>{skill}</li>;
     });

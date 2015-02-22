@@ -11,7 +11,7 @@ var ProjectPreview = React.createClass({
   },
 
   render: function() {
-    var thumbnails = this.props.project.vignettes.map( (url,index) => {
+    var thumbnails = this.props.project.vignettes.map( (url, index) => {
       return (
         <li key={index}>
           <Link to="project" params={this.props.project} title="voir le projet ${this.props.project.name}">
@@ -24,7 +24,7 @@ var ProjectPreview = React.createClass({
     return (
       <li>
         <h2>
-          <Link  to="project" params={this.props.project} title="voir le projet {{projet.name}}">
+          <Link to="project" params={this.props.project} title="voir le projet {{projet.name}}">
             {this.props.project.name}
           </Link>
           &nbsp;-&nbsp;

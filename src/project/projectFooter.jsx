@@ -1,9 +1,11 @@
-var React = require('react');
+"use strict";
+
+var React = require("react");
 
 var ProjectFooter = React.createClass({
 
   render: function() {
-    var year = (new Date).getFullYear()
+    var year = (new Date()).getFullYear();
     return (
       <footer>
         <span>&copy; {year}</span>

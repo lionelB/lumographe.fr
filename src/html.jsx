@@ -1,4 +1,6 @@
-var React = require('react');
+"use strict";
+
+var React = require("react");
 
 var Html = React.createClass({
 
@@ -8,9 +10,9 @@ var Html = React.createClass({
         <head>
           <meta charSet="utf-8"></meta>
           <title>{ this.props.title }</title>
-          <meta name="author"  content={ this.props.author }></meta>
+          <meta name="author" content={ this.props.author }></meta>
           <meta name="description" content={ this.props.description }></meta>
-          <meta name="keywords"  content={ this.props.keywords }></meta>
+          <meta name="keywords" content={ this.props.keywords }></meta>
           <meta name="geo.placename" content="Loriol, Drôme, France"></meta>
           <meta name="viewport" content="width=device-width"></meta>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

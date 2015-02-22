@@ -7,14 +7,15 @@ var webpack = require("webpack");
 var webpackConfig = require("./webpack.config.js");
 
 var livereload = require("livereload");
+var path = require("path");
 
 // default task: copy assest and build js
 gulp.task("default", ["assets", "webpack:build"]);
 
 
 gulp.task("dev", ["assets"], function(){
-  var livereload = livereload.createServer();
-  livereload.watch( __dirname + "/dist");
+  livereload = livereload.createServer();
+  livereload.watch( path.join(__dirname, "/dist"));
 });
 
 gulp.task("webpack:build", function(done) {
@@ -51,8 +52,10 @@ gulp.task("markdown", function(){
     .pipe(gulp.dest("dist/json/"));
 });
 
-var fs = require("vinyl-fs");
-var source = require("vinyl-source-stream");
+/**
+ * markdown transformation task
+ * @type {[type]}
+ */
 var through = require("through2");
 var marked = require("meta-marked");
 

@@ -1,15 +1,21 @@
 {
   "ecmaFeatures": {
     "jsx": true,
-    "arrowFunctions ": true,
+    "arrowFunctions": true,
+    "binaryLiterals": true,
     "blockBindings": true,
-    "templateStrings": true,
+    "defaultParams": true,
+    "destructuring": true,
     "forOf": true,
     "defaultParams": true,
     "objectLiteralComputedProperties": true,
     "objectLiteralDuplicateProperties": true,
     "objectLiteralShorthandMethods": true,
     "objectLiteralShorthandProperties": true,
+    "octalLiterals": true,
+    "spread": true,
+    "templateStrings": true,
+    "unicodeCodePointEscapes": true
   },
   "env": {
     "browser": true,

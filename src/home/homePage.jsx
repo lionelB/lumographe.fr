@@ -17,30 +17,28 @@ var SkillSet = require("./skillSet");
 var Social = require("./social");
 var DocumentTitle = require("react-document-title");
 
-var {Link} = Router;
-
-
 var HomePage = React.createClass({
   displayName: "Home",
   statics: {
-    fetchData: (params) => {
+    fetchData: () => {
       return api.getPageData("index.html")
         .then( actions.initHome)
         .catch( actions.loadHomeError);
     }
   },
-  mixins: [ Router.State,  flux.storeMixin(store)],
+  mixins: [ Router.State, flux.storeMixin(store)],
 
   render() {
-    var projects = this.state.projects.map((project,index) => {
+    var projects = this.state.projects.map((project, index) => {
        return <ProjectPreview key={index} project={project} />;
     });
 
-    var skills = this.state.skills.map((skillset,index) => {
+    var skills = this.state.skills.map((skillset, index) => {
       return <SkillSet key={index} name={skillset.label} skills={skillset.values} />;
     });
-    var markup = this.state.html.split('<hr>');
+    var markup = this.state.html.split("<hr>");
     return (
+      <DocumentTitle title="Lumographe">
       <div>
         <Header />
         <Intro quotes={this.state.bubbles} markup={markup[0]} />
@@ -76,6 +74,7 @@ var HomePage = React.createClass({
           </div>
         </section>
       </div>
+      </DocumentTitle>
     );
   }
 });

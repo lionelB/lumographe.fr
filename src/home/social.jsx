@@ -1,11 +1,13 @@
-var React = require('react');
+"use strict";
+
+var React = require("react");
 
 var Social = React.createClass({
   propTypes: {
     links: React.PropTypes.array.isRequired
   },
   render: function() {
-    var links = this.props.links.map( (link,index) => {
+    var links = this.props.links.map( (link, index) => {
       return (<li key={index}>
         <i className={"icon-" + link.name}></i>&nbsp;
         <a href={link.url}>{link.value}</a>
