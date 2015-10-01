@@ -1,28 +1,61 @@
 {
+  "extends": "eslint:recommended",
   "ecmaFeatures": {
     "jsx": true,
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "defaultParams": true,
+    "modules": true,
+    "arrowFunctions":true,
+    "blockBindings": "true",
+    "classes": true,
+    "defautParams": true,
     "destructuring": true,
     "forOf": true,
-    "defaultParams": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
     "spread": true,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": true
+    "templateString": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShortHandProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralComputedProperties": true
   },
   "env": {
     "browser": true,
     "node": true
   },
   "rules": {
-    "global-strict": true,
-    "no-use-before-define": false,
-  }
+    "no-console": 0,
+    "strict": [2, "never"],
+    "react/jsx-boolean-value": 1,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-curly-spacing": 1,
+    "react/jsx-indent-props": 1,
+    "react/jsx-no-duplicate-props": 1,
+    "react/jsx-no-literals": 0,
+    "react/jsx-no-undef": 1,
+    "react/jsx-quotes": [1,"double"],
+    "react/jsx-sort-prop-types": 0,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/wrap-multilines": 2,
+    "react/display-name": 0,
+    "react/no-did-mount-set-state": [2, "allow-in-func"],
+    "react/no-multi-comp": 2,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/sort-comp": [2, {
+      "order": [
+        "propTypes",
+        "lifecycle",
+        "/^on.+$/",
+        "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+        "everything-else",
+        "/^render.+$/",
+        "render"
+      ]
+    }]
+  },
+  "plugins": [
+    "react"
+  ]
 }
+
