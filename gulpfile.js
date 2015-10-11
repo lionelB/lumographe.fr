@@ -2,15 +2,7 @@
 
 var gulp = require("gulp");
 var gutil = require("gulp-util");
-
-var webpack = require("webpack");
-var webpackConfig = require("./webpack.config.js");
-
-var livereload = require("livereload");
 var path = require("path");
-
-// default task: copy assest and build js
-gulp.task("default", ["assets", "webpack:build"]);
 
 
 gulp.task("dev", ["assets"], function(){
@@ -18,18 +10,6 @@ gulp.task("dev", ["assets"], function(){
   livereload.watch( path.join(__dirname, "/dist"));
 });
 
-gulp.task("webpack:build", function(done) {
-  webpack(webpackConfig, function(err, stats) {
-    if(err) {
-      throw new gutil.PluginError("webpack:build", err);
-    }
-    gutil.log("[webpack:build]", stats.toString({
-      colors: true
-    }));
-
-    done();
-  });
-});
 
 /**
  * assets tasks
