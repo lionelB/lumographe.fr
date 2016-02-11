@@ -8,8 +8,12 @@ export default class ProjectPage extends Component {
         <h2>Project</h2>
         <h3>{this.props.params.url}</h3>
         <Link to="/">Home</Link> - 
-        <Link to="/" onlyActiveOnIndex={true}> index</Link>
+        <Link to="/project/toto.html" activeStyle={{ color: 'red' }}> index</Link>
       </div>
     );
   }
+}
+
+ProjectPage.propTypes = {
+  params: React.PropTypes.object
 }

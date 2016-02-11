@@ -1,0 +1,19 @@
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-semibold.woff2') format('woff2'),
+         url('../fonts/montserrat-semibold.woff') format('woff'),
+         url('../fonts/montserrat-semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ebgaramond';
+    src: url('../fonts/ebgaramond08-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ebgaramond08-regular-webfont.woff') format('woff'),
+         url('../fonts/ebgaramond08-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

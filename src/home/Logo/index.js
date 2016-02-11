@@ -11,6 +11,7 @@ const style = {
   "strokeWidth": "1px",
   "stroke": "black"
 };
+
 const center = {
   x:75,
   y: 125

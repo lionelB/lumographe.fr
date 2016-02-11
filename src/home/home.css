@@ -1,0 +1,171 @@
+@import "../css/colors.css";
+
+.TopBorder {
+  height: .3em;
+  background-image: linear-gradient(-90deg, var(--green) 3%, var(--blue) 98%);
+}
+
+.Hero {
+  background: url(../img/stardust.gif), 
+              linear-gradient(-180deg, var(--hero-gradient1) 0%, var(--hero-gradient2) 93%, var(--hero-gradient3) 100%); 
+  padding: 2em;
+  position: relative;
+  text-align: center;
+}
+
+.Hero::after{
+  content: url(../img/arrondi.svg);
+  position: absolute;
+  width: 100%;
+  bottom: -1px;
+  line-height: 0;
+  left: 0;
+}
+
+.Hero-bgArtwork {
+  padding-top:  41.964%;
+  width: calc(100% - 1px);
+  background: url(../img/fond.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+}
+
+.Hero-logo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 20.75%;
+  transform: translate(-45%, -22%);
+}
+.Hero-brand {
+  transform: translate(0, -2em);
+}
+
+.Hero-title {
+  margin: 0;
+  font-size: 3.2em;
+  letter-spacing: .05em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(19,38,102,0.50);
+}
+
+.Hero-subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 1.85em;
+  line-height: 1;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 3px #7DEDFF;
+}
+
+
+.Hero-avatar {
+  width: 9em;
+  height: 9em;
+  border-radius: 9em;
+  border: .4em solid var(--gray);
+  margin-bottom: -6em;
+  position: relative;
+  z-index: 1;
+}
+
+.Content {
+  max-width: 50rem;
+  margin: auto;
+}
+
+.Bio {
+  max-width: 35rem;
+  margin:6em  auto;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+.SectionTitle {
+  text-align: center;
+  margin-bottom: 2em;
+  letter-spacing: .015em;
+}
+
+.SectionTitle-content {
+  max-width: 50rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.SectionTitle-small {
+  font-size: 1.6em;
+  line-height: 1.2;
+  color: var(--gray);
+}
+
+.SectionTitle-separator {
+  font-size: 2em;
+  color: var(--green);
+  font-weight: 700;
+}
+
+.SectionTitle-big {
+  color: var(--black);
+  font-size: 2.1em;
+  text-transform: uppercase;
+  display: inline-block; 
+  vertical-align: middle;
+  margin-top: -.175em;
+}
+
+.SectionTitle--multiline {
+  text-align: left;
+  line-height: 1.2;
+  position: relative;
+  background-color: var(--light-gray);
+  padding: 3em 0;
+}
+.SectionTitle--multiline::before,
+.SectionTitle--multiline::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 2.778%; 
+  background: url(../img/SectionTop.svg) no-repeat ;
+}
+
+.SectionTitle--multiline::after {
+  top: auto;
+  bottom: 0;
+  padding-top: 2.4305%; 
+  background: url(../img/SectionBottom.svg) no-repeat ;
+}
+.SectionTitle--multiline .SectionTitle-separator {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -.2em;
+  height: .2em;
+  width: 1.75em;
+  background-color: var(--green);
+}
+
+.SectionTitle--multiline .SectionTitle-big {
+  display: block;
+  text-transform: none;
+}
+
+.font-ebgaramond .Hero-subtitle,
+.font-ebgaramond .SectionTitle {
+  font-family: ebgaramond, serif;
+}
+
+
+.font-montserrat .Hero-title ,
+.font-montserrat .SectionTitle-big{
+  font-family: montserrat, serif;
+  font-weight: 400;
+}
+
+
+

@@ -62,7 +62,6 @@ skills:
     values: 
       - "ReactJs"
       - "Isomorphic App"
-
 ---
 Bonjour,
 et bienvenue. Je m’appelle __Lionel Breduillieard__ et je suis développeur web indépendant.
