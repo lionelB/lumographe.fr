@@ -68,7 +68,7 @@ var HomePage = React.createClass({
               <span className="locality">Loriol sur Drôme</span> - <span className="country">France</span>
             </address>
             <ul className="flat icons">
-              <li><i className="icon-phone"></i>{this.state.mobile}</li>
+              <li><i className="icon-phone"></i> <a href={`tel:${this.state.mobile}`}>{this.state.mobile}</a></li>
               <li><i className="icon-envelop"></i> <a href={this.state.email}>{this.state.email}</a></li>
             </ul>
           </div>
