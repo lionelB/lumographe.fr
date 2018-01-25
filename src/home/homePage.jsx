@@ -69,7 +69,7 @@ var HomePage = React.createClass({
             </address>
             <ul className="flat icons">
               <li><i className="icon-phone"></i>{this.state.mobile}</li>
-              <li><i className="icon-envelop"></i> <a href={this.state.email}>{this.state.email}</a></li>
+              <li><i className="icon-envelop"></i> <a href={`mailto:${this.state.email}`}>{this.state.email}</a></li>
             </ul>
           </div>
         </section>
